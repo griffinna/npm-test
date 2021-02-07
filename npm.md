@@ -76,3 +76,27 @@ devDependencies에 기록 한 후, 앞에 npx 명령어를 붙여 실행하면 �
   1. npm install: npm i  
   1. save-dev: -D  
   1. globla: -g
+
+# 기타 npm 명령어
+- npm outdated: 업데이트 할 수 있는 패키지가 있는지 확인  
+Current 와 Wanted 가 다르다면 업데이트가 필요
+- npm update: 업데이트 가능한 모든 패키지가 Wanted 에 적힌 버전으로 업데이트
+- npm update [패키지명]: 패키지 업데이트
+- npm uninstall [패키지명]: 패당 패키지를 제거하는 명령어  
+패키지가 node_modules 폴더와 package.json 에서 사라짐  
+**npm rm 패키지명** 으로 줄여쓸수있음
+- npm serach [검색어]: 패키지를 검색
+- npm info [패키지명]: 패키지의 세부 정보를 파악  
+package.json 의 내용과 의존 관계, 설치 가능한 버전 정보 등이 표시됨
+- npm adduser: npm 로그인을 위한 명령어 (패키지를 배포할 때 로그인이 필요)  
+npm 공식 사이트에서 가입한 계정으로 로그인  
+- npm whoami: 로그인한 사용자가 누구인지 알림 (로그인 상태가 아니면 에러 발생)
+- npm logout: npm adduser 로 로그인한 계정을 로그아웃
+- npm version [버전]: package.json 의 버전을 올림
+> **npm version 5.3.2** : 원하는 버전의 숫자를 넣음  
+**npm version minor** : 해당 부분의 숫자를 1 올림
+- npm deprecate [패키지명] [버전] [메시지]: 해당 패키지를 설치할 때 경고 메시지를 띄움
+- npm publish: 자신이 만든 패키지를 배포
+- npm unpublish: 배포한 패키지를 제거 (24시간 이내에 배포한 패키지만 제거가능)
+- npm ci: package.json 대신 package-lock.json 기반하여 패키지 설치  
+더 엄격하게 버전을 통제하여 패키지를 설치
